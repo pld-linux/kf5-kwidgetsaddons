@@ -1,15 +1,15 @@
-%define		kdeframever	5.67
+%define		kdeframever	5.79
 %define		qtver		5.9.0
 %define		kfname		kwidgetsaddons
 
 Summary:	Large set of desktop widgets
 Name:		kf5-%{kfname}
-Version:	5.67.0
+Version:	5.79.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9616a12c63a1c65562e7f5b5fcb29e07
+# Source0-md5:	b67544527fcc3c8a38cc14813da45290
 Patch0:		failed-tests.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/designer/kwidgetsaddons5widgets.so
 %dir %{_datadir}/kf5/kcharselect
 %{_datadir}/kf5/kcharselect/kcharselect-data
+%{_datadir}/qlogging-categories5/kwidgetsaddons.categories
 
 %files devel
 %defattr(644,root,root,755)
