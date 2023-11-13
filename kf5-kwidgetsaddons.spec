@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.111
+%define		kdeframever	5.112
 %define		qtver		5.15.2
 %define		kfname		kwidgetsaddons
 
 Summary:	Large set of desktop widgets
 Name:		kf5-%{kfname}
-Version:	5.111.0
+Version:	5.112.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	8196f9b7a5947ed354882d281d009204
+# Source0-md5:	3ea2b36c47f8da3d224174b2493dbff3
 Patch0:		failed-tests.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
